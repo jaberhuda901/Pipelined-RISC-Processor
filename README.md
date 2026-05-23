@@ -30,6 +30,26 @@ The design prioritizes modular frontend design practices, explicit instruction p
 
 ---
 
+## System Architecture & Microarchitecture Specification
+
+The design is split into clear structural hierarchical boundaries:
+
+```text
+  +-------------------------------------------------------------+
+  |                      RISC_SYSTEM_TOP                        |
+  |                                                             |
+  |   +------------------+             +--------------------+   |
+  |   |  risc_imemory    |--Instr[12:0]|    risc_cpu_top    |   |
+  |   |                  |<----PC[4:0]-|                    |   |
+  |   +------------------+             |                    |   |
+  |                                    |   (IU, DU, RF, EU) |   |
+  |   +------------------+             |                    |   |
+  |   |  risc_dmemory    |<==Addr/Data=|                    |   |
+  |   |                  |<----Ctrl----|                    |   |
+  |   +------------------+             +--------------------+   |
+  +-------------------------------------------------------------+
+```
+
 ## Instruction Set Architecture (ISA) & Format
 
 Instructions are dynamically parsed by the Decoder according to their structural class:
