@@ -1,5 +1,6 @@
 # Pipelined RISC Processor RTL Design & Verification
 
+```bash
 pipelined-risc-processor/
 ├── rtl/
 │   ├── risc_iunit.v
@@ -14,7 +15,7 @@ pipelined-risc-processor/
 ├── docs/
 │   └── Lab4_report.pdf
 └── README.md
-
+```
 ## Project Overview
 This repository contains the synthesis-ready RTL microarchitecture design and testbench verification for a 4-stage pipelined RISC (Reduced Instruction Set Computer) processor implemented in Verilog HDL. The processor features an optimized data and control path capable of executing 16 distinct arithmetic, logical, shift, and memory-mapped instructions (Load/Store), bound by synchronous control logic and active-low resets (`rst_n`).
 
